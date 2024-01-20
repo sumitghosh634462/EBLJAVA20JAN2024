@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.*;
 import java.sql.*;
 
+System.out.println("Hello");
+
 import com.wecp.progressive.config.DatabaseConnectionManager;
 import com.wecp.progressive.dto.CustomerAccountInfo;
 import com.wecp.progressive.entity.Customers;
