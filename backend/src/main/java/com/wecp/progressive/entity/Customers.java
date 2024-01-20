@@ -71,4 +71,10 @@ public class Customers {
         this.role = role;
     }
 
+    @Override
+    public String toString() {
+        return "Customers [customer_id=" + customer_id + ", name=" + name + ", email=" + email + ", username="
+                + username + ", password=" + password + ", role=" + role + "]";
+    }
+
 }
