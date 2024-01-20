@@ -1,2 +1,2 @@
 # EBLJAVA20JAN2024
-THIS repossitory is for wecp banksafe project
+THIS repossitory is to hold JAVA EBL progressive Project Code 20JAN2024
