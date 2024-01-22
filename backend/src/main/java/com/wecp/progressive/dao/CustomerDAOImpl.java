@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.*;
 
-
 import com.wecp.progressive.dto.CustomerAccountInfo;
 import com.wecp.progressive.entity.Customers;
 
@@ -162,37 +161,35 @@ import com.wecp.progressive.entity.Customers;
 public class CustomerDAOImpl implements CustomerDAO {
     ArrayList<Customers> al = new ArrayList<>();
 
-public int addCustomer(Customers customers){
+    public int addCustomer(Customers customers) {
 
-    for(Customers c : al){
-        if(c.getCustomer_id() == customers.getCustomer_id()){
-            return -1;
-        } 
+        for (Customers c : al) {
+            if (c.getCustomer_id() == customers.getCustomer_id()) {
+                return -1;
+            }
+        }
+        al.add(customers);
+        return 1;
     }
-    al.add(customers);
-    return 1;
-}
 
     @Override
     public void deleteCustomer(int customerId) {
         // for(int i =0;i<al.size();i++){
-        //     if(al.get(i).getCustomer_id() == customerId){
-        //         al.remove(i);
-        //     }
+        // if(al.get(i).getCustomer_id() == customerId){
+        // al.remove(i);
+        // }
         // }
 
-
         // TODO Auto-generated method stub
-        ListIterator <Customers> itr = al.listIterator();
-        while(itr.hasNext()){
+        ListIterator<Customers> itr = al.listIterator();
+        while (itr.hasNext()) {
             Customers cus = itr.next();
-            if(cus.getCustomer_id() == customerId){
+            if (cus.getCustomer_id() == customerId) {
                 itr.remove();
-                System.out.println("Customer with ID "+customerId+" DELETED!!");
+                System.out.println("Customer with ID " + customerId + " DELETED!!");
             }
         }
-        System.out.println("Customer with ID "+customerId+" not FOUND"); 
-
+        System.out.println("Customer with ID " + customerId + " not FOUND");
 
     }
 
@@ -203,7 +200,7 @@ public int addCustomer(Customers customers){
     }
 
     @Override
-    public CustomerAccountInfo getCustomerAccountInfo(int customerId) { 
+    public CustomerAccountInfo getCustomerAccountInfo(int customerId) {
         // TODO Auto-generated method stub
         return null;
     }
@@ -211,8 +208,8 @@ public int addCustomer(Customers customers){
     @Override
     public Customers getCustomerById(int customerId) {
         // TODO Auto-generated method stub
-        for(Customers c: al){
-            if(c.getCustomer_id() == customerId){
+        for (Customers c : al) {
+            if (c.getCustomer_id() == customerId) {
                 return c;
             }
         }
@@ -222,7 +219,6 @@ public int addCustomer(Customers customers){
     @Override
     public void updateCustomer(Customers customers) {
         // TODO Auto-generated method stub
-
 
     }
 }

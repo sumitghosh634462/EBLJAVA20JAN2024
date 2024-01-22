@@ -54,6 +54,12 @@ public class Transactions {
         this.transaction_date = transaction_date;
     }
 
+    @Override
+    public String toString() {
+        return "Transactions [transaction_id=" + transaction_id + ", account_id=" + account_id + ", amount=" + amount
+                + ", transaction_date=" + transaction_date + ", transaction_type=" + transaction_type + "]";
+    }
+
     public String getTransaction_type() {
         return transaction_type;
     }

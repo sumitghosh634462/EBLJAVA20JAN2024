@@ -40,4 +40,10 @@ public class Accounts {
         this.balance = balance;
     }
 
+    @Override
+    public String toString() {
+        return "Accounts [account_id=" + account_id + ", customer_id=" + customer_id + ", balance=" + balance + "]";
+    }
+    
+
 }
