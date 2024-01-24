@@ -1,17 +1,20 @@
 package com.wecp.progressive.dao;
-
-<<<<<<< HEAD
-
-public class TransactionDAOImpl {
-
-
-=======
-import java.util.ArrayList;
-import java.util.List;
-
-import org.hibernate.loader.custom.Return;
+import java.util.*;
 
 import com.wecp.progressive.entity.Transactions;
+
+// import com.wecp.progressive.dto.CustomerAccountInfo;
+// import com.wecp.progressive.entity.Transactions;
+
+// public class TransactionDAOImpl implements TransactionDAO{
+
+
+// import java.util.ArrayList;
+// import java.util.List;
+
+// import org.hibernate.loader.custom.Return;
+
+// import com.wecp.progressive.entity.Transactions;
 
 // public class TransactionDAOImpl implements TransactionDAO {
 
@@ -143,7 +146,7 @@ import com.wecp.progressive.entity.Transactions;
 // }
 
 public class TransactionDAOImpl implements TransactionDAO {
-  ArrayList<Transactions> al = new ArrayList<>();
+   ArrayList<Transactions> al = new ArrayList<Transactions>();
 
   @Override
   public int addTransaction(Transactions transaction) {
@@ -190,8 +193,7 @@ public class TransactionDAOImpl implements TransactionDAO {
   @Override
   public void updateTransaction(Transactions transaction) {
     // TODO Auto-generated method stub
-
+    throw new UnsupportedOperationException("Unimplemented method 'updateTransaction'");
   }
->>>>>>> 7a35078e25d407a92afa99fb156b1faea3380993
 
 }

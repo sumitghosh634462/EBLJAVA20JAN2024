@@ -1,6 +1,5 @@
 package com.wecp.progressive.dao;
 
-
 import com.wecp.progressive.entity.Accounts;
 
 import java.util.List;

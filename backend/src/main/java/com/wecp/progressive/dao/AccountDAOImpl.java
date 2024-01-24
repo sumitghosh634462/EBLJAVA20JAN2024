@@ -1,9 +1,5 @@
 package com.wecp.progressive.dao;
 
-<<<<<<< HEAD
-public class AccountDAOImpl {
-
-=======
 import java.sql.*;
 import java.util.*;
 
@@ -134,44 +130,46 @@ public class AccountDAOImpl implements AccountDAO {
     ArrayList<Accounts> al = new ArrayList<>();
 
     public int addAccount(Accounts accounts) {
-        for (Accounts a : al) {
-            if (a.getAccount_id() == accounts.getAccount_id()) {
-                return -1;
-            }
-        }
-        al.add(accounts);
-        return 1;
+        // for (Accounts a : al) {
+        //     if (a.getAccount_id() == accounts.getAccount_id()) {
+        //         return -1;
+        //     }
+        // }
+        // al.add(accounts);
+        return -1;
     }
 
     @Override
     public void deleteAccount(int accountId) {
         // TODO Auto-generated method stub
-        ListIterator<Accounts> itr = al.listIterator();
-        while (itr.hasNext()) {
-            Accounts ac = itr.next();
-            if (ac.getAccount_id() == accountId) {
-                al.remove(accountId);
-                System.out.println("Acoount number--> " + accountId + " DELETED");
-            }
-        }
-        System.out.println("Account number " + accountId + " Not Found!!");
+        // ListIterator<Accounts> itr = al.listIterator();
+        // while (itr.hasNext()) {
+        //     Accounts ac = itr.next();
+        //     if (ac.getAccount_id() == accountId) {
+        //         al.remove(accountId);
+        //         System.out.println("Acoount number--> " + accountId + " DELETED");
+        //     }
+        // }
+        // System.out.println("Account number " + accountId + " Not Found!!");
     }
 
     @Override
     public Accounts getAccountById(int accountId) {
         // TODO Auto-generated method stub
-        for (Accounts a : al) {
-            if (a.getAccount_id() == accountId) {
-                return a;
-            }
-        }
-        return null;
+        // for (Accounts a : al) {
+        //     if (a.getAccount_id() == accountId) {
+        //         return a;
+        //     }
+        // }
+         return null;
     }
 
     @Override
     public List<Accounts> getAllAccounts() {
         // TODO Auto-generated method stub
-        return al;
+        return null;
+       // return al;
+        
     }
 
     @Override
@@ -179,5 +177,4 @@ public class AccountDAOImpl implements AccountDAO {
         // TODO Auto-generated method stub
 
     }
->>>>>>> 7a35078e25d407a92afa99fb156b1faea3380993
 }
